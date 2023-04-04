@@ -7,3 +7,9 @@
 5. Unknown limits for forums, possibly the same as for channels (**not checked**)
 #### Other
 1. 30 requests per 30 seconds, not combining with anything (**undocumented**)
+
+### Queue impl
+1. Standalone queue for api requests - 30r/30sec
+2. Common queue for messages (any) - 30r/1sec
+3. Dedicated queue for each user - 5r/1sec
+4. Dedicated queue for each channel 20r/60sec
